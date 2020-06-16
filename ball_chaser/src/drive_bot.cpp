@@ -21,8 +21,6 @@ ros::Publisher motor_command_publisher;
 
   motor_command_publisher.publish(motor_command);
 
-  ros::Duration(3).sleep();
-
   res.msg_feedback = "Linear velocity set at " + std::to_string(motor_command.linear.x) + " ,Angular velocity set at " + std::to_string(motor_command.angular.z);
 
   ROS_INFO_STREAM(res.msg_feedback);
